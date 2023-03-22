@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="/microsoft-paint.png">
+</head>
+
+<body class="alignment column">
+    <h1 class="alignment pb-3 fs-1 italic">Color Mixer Generator</h1>
+    <div class="container border-1 border-radius bg-light">
+        <div class="color bg-dark border-bottom border-secondary">
+        </div>
+        <div class="rgb column pt-3 gap-2">
+            <input type="range" name="red" min="0" value="0" max="360" id="red" oninput={handleChange(this)}>
+            <input type="range" name="green" min="0" value="0" max="360" id="green" oninput={handleChange(this)}>
+            <input type="range" name="blue" min="0" value="0" max="360" id="blue" oninput={handleChange(this)}>
+        </div>
+        <div class="colorCode alignment fs-2 fw-bold pt-3 gap-2">
+            <p>rgb(0,0,0)</p>
+            <button class="btn" onclick="copyContent()">Copy</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
